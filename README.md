@@ -2,20 +2,33 @@
 Prompt Engineering Assignment — Summary Document
 
 1. Tools Used
+   
 •	ChatGPT 
+
 •	Vidyard for screen recording
+
 • 	Netlify and GitHub Pages for hosting final website
+
 •	VS Code for preview testing
+
 •	Unsplash, Heroicons for images and icons (as needed by prompts)
 
 
 2. Prompt Strategy
+   
 I created a Master Meta-Prompt that defined strict rules for:
+
 •	Design system (spacing, typography, colors, icons)
+
 •	Responsiveness (mobile-first, Tailwind responsive classes)
+
 •	Code quality (semantic HTML5, clean structure, accessibility)
+
 •	Consistency across all sections
+
 •	Reusability across any AI tool
+
+
 Then I created section-specific prompts (Navbar, Hero, Services, Contact Form, Footer) that referenced the Meta-Prompt so every component matched visually.
 This allowed me to generate clean, responsive, reliable UI every time without rewriting instructions repeatedly.
 
@@ -45,12 +58,14 @@ GENERAL DESIGN RULES
 5. All sections must look clean and modern with proper hierarchy.
 
 RESPONSIVENESS RULES
+
 1. Mobile-first layout.
 2. Columns stack on mobile (`flex-col`, `grid-cols-1`) and expand on desktop.
 3. Use `max-w-7xl mx-auto` container width.
 4. Ensure images are responsive (`w-full h-auto object-cover`).
 
 VISUAL STYLE RULES
+
 1. Soft shadows: `shadow-md hover:shadow-lg transition`
 2. Plenty of whitespace
 3. Icons must be SVG (Heroicons, Feather, or Font Awesome Free).
@@ -79,6 +94,7 @@ Reply: “Ready for section prompts.”
 SECTION-SPECIFIC PROMPTS
 
 A. NAVBAR PROMPT
+
 Generate a fully responsive navigation bar that follows the meta-prompt rules.
 
 Requirements:
@@ -93,6 +109,7 @@ Requirements:
 Return full HTML only.
 
 B. HERO SECTION PROMPT
+
 Generate a premium hero section following the meta-prompt.
 
 Requirements:
@@ -107,6 +124,7 @@ Requirements:
 Return full HTML only.
 
 C. FEATURES SECTION PROMPT
+
 Generate a Features section following the meta-prompt.
 
 Requirements:
@@ -122,6 +140,7 @@ Requirements:
 Return full HTML only.
 
 D. CONTACT PROMPT
+
 Generate a responsive Contact section that follows the meta-prompt.
 
 Requirements:
@@ -140,6 +159,7 @@ Requirements:
 Return full HTML only.
 
 E. FOOTER PROMPT
+
 Generate a clean, modern footer following the meta-prompt.
 
 Requirements:
@@ -154,6 +174,7 @@ Requirements:
 Return full HTML only.
 
 FINAL PAGE MERGE PROMPT
+
 Combine all previously generated components (navbar, hero, services, contact form, footer) into one single HTML page.
 
 Requirements:
@@ -165,55 +186,86 @@ Requirements:
 
 
 4. Why I Wrote the Prompts This Way
+   
 Clarity & Structure
+
 The prompts were long and extremely specific so the AI had no ambiguity about spacing, styling, responsiveness, or accessibility.
+
 Reusability
+
 The Master Meta-Prompt can be reused indefinitely for any front-end UI section.
+
 It acts like a design system + coding standard combined.
+
 Consistency
+
 By centralizing styling rules (padding, shadows, fonts), every generated section automatically looked unified.
+
 Reliability
+
 The more detailed the constraints, the more consistently the AI outputs high-quality, bug-free code.
 
 
+
 5. How I Refined the Prompts
+   
 During generation:
+
 •	I checked responsiveness in Chrome DevTools
+
 •	Adjusted spacing rules to avoid cramped layouts
+
 •	Improved typography scale for mobile and desktop
+
 •	Added accessibility requirements (labels, alt text, button semantics)
+
 •	Ensured sections follow the same visual rhythm
+
 •	Fixed any inconsistencies by clarifying rules in the Meta-Prompt
+
 Every iteration made the Meta-Prompt stronger and more reusable.
 
 
 6. Challenges Faced
+   
+   
 1. Consistent Spacing Across Sections
+   
 AI sometimes outputs uneven padding.
+
 → Fixed by specifying exact spacing (py-16, px-6, max-w-7xl mx-auto).
+
 2. Icon & Image Rendering Differences
+   
 Not all AI tools use the same SVG format.
+
 → Restricted icon sets to Heroicons/Feather for consistency.
+
 3. Responsive Grid Behavior
+   
 Some tools generate fixed-width columns.
+
 → Forced mobile-first rules + Tailwind responsive classes.
+
 4. Avoiding Inline Styles
+   
 AI occasionally uses inline CSS.
+
 → Clarified strict "no inline styles" rule.
 
 
-7. Final Deliverables
-1. Vidyard Recording Link
-
-2. Hosted Live Website Link Netlify and Github
-
-3. Summary Document
 
    
 
 8. Conclusion
+    
+   
 This assignment demonstrated:
+
 •	How structured prompt engineering leads to consistent, professional UI
+
 •	The importance of reusability, modular prompts, and a master design system
+
 •	How iteration and refinement improve AI-generated front-end code quality
+
 The final output is a clean, responsive, modern webpage built entirely from AI-generated code with no manual styling edits.
